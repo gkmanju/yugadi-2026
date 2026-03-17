@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folsom Kannada Group – Yugadi 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #fffbf0;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+      color: #ffffff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header .emoji { font-size: 3.5rem; margin-bottom: 0.75rem; display: block; }
+    header h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.4rem; }
+    header .subtitle { font-size: 1.1rem; color: #f0abfc; margin-bottom: 1rem; }
+    header .event-meta {
+      display: inline-flex; flex-wrap: wrap; gap: 1.2rem;
+      background: rgba(255,255,255,0.15); border-radius: 10px;
+      padding: 0.75rem 1.5rem; margin-top: 0.5rem;
+      font-size: 1rem; color: #fff;
+    }
+    header .event-meta span::before { margin-right: 0.4rem; }
+
+    main {
+      max-width: 820px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.75rem; color: #7c3aed; }
+
+    .card {
+      background: white;
+      border: 1px solid #e9d5ff;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Food Table ── */
+    table { width: 100%; border-collapse: collapse; font-size: 0.97rem; }
+    th {
+      background: #f3e8ff; color: #6d28d9;
+      padding: 0.6rem 1rem; text-align: left; font-weight: 600;
+    }
+    td { padding: 0.6rem 1rem; border-top: 1px solid #f3e8ff; }
+    tr:last-child td { border-bottom: none; }
+
+    .badge {
+      display: inline-block; padding: 0.2rem 0.65rem;
+      border-radius: 99px; font-size: 0.78rem; font-weight: 600;
+    }
+    .taken  { background: #dcfce7; color: #166534; }
+    .open   { background: #fef9c3; color: #854d0e; }
+
+    /* ── RSVP List ── */
+    .rsvp-list { list-style: none; padding: 0; }
+    .rsvp-list li {
+      display: flex; justify-content: space-between;
+      padding: 0.45rem 0; border-bottom: 1px solid #f3e8ff;
+      color: #475569;
+    }
+    .rsvp-list li:last-child { border-bottom: none; }
+    .rsvp-list .count { font-weight: 600; color: #7c3aed; }
+    .rsvp-summary {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .rsvp-summary .stat {
+      background: #f3e8ff; border-radius: 8px;
+      padding: 0.5rem 1rem; text-align: center;
+    }
+    .rsvp-summary .stat .num { font-size: 1.5rem; font-weight: 700; color: #7c3aed; }
+    .rsvp-summary .stat .lbl { font-size: 0.78rem; color: #6d28d9; }
+
+    /* ── Form ── */
+    form label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; color: #374151; }
+    form input, form select, form textarea {
+      width: 100%; padding: 0.55rem 0.85rem;
+      border: 1px solid #d1d5db; border-radius: 7px;
+      font-size: 0.97rem; margin-bottom: 1rem;
+      font-family: inherit;
+    }
+    form input:focus, form select:focus, form textarea:focus {
+      outline: none; border-color: #7c3aed; box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
+    button[type="submit"] {
+      background: linear-gradient(135deg, #7c3aed, #db2777);
+      color: white; border: none; padding: 0.75rem 2rem;
+      border-radius: 8px; font-size: 1rem; font-weight: 600;
+      cursor: pointer; width: 100%;
+    }
+    button[type="submit"]:hover { opacity: 0.9; }
+    .form-note { font-size: 0.82rem; color: #9ca3af; text-align: center; margin-top: 0.5rem; }
+
+    /* ── Edit hint ── */
+    .edit-hint {
+      background: #eff6ff; border: 1px solid #bfdbfe;
+      border-radius: 8px; padding: 0.75rem 1rem;
+      font-size: 0.85rem; color: #1d4ed8; margin-bottom: 1.5rem;
+    }
+    .edit-hint strong { display: block; margin-bottom: 0.25rem; }
+
+    footer {
+      text-align: center; padding: 2rem;
+      color: #94a3b8; font-size: 0.9rem;
+      border-top: 1px solid #e9d5ff;
+    }
+    footer a { color: #7c3aed; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="emoji">🌸</span>
+  <h1>Yugadi 2026</h1>
+  <p class="subtitle">Folsom Kannada Group — Outdoor Meet</p>
+  <div class="event-meta">
+    <span>📅 Saturday, March 21, 2026</span>
+    <span>🕥 10:30 AM – 2:00 PM PDT</span>
+    <span>📍 <!-- EDIT: Add location here --> Folsom, CA</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══════════════════════════════════════════════
+       HOW TO EDIT THIS PAGE ON GITHUB:
+       1. Go to your GitHub repo → github-pages/yugadi-2026.html
+       2. Click the pencil ✏️ icon (Edit this file)
+       3. Find the section you want to change (food table, RSVPs, location)
+       4. Make your changes and click "Commit changes"
+       Changes go live within ~1 minute.
+  ══════════════════════════════════════════════ -->
+
+  <div class="edit-hint">
+    <strong>✏️ Organizers — how to update this page:</strong>
+    Open <code>yugadi-2026.html</code> on GitHub, click the pencil icon, edit, and commit.
+    Changes go live in ~1 minute. No login required for guests to view or RSVP.
+  </div>
+
+  <!-- ── Food Items ── -->
+  <section>
+    <h2>🍽️ Food Items</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty / Notes</th>
+            <th>Assigned To</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- EDIT: Add/remove rows below. Change "open" to "taken" and add name when claimed. -->
+          <tr>
+            <td>Bale Kai Bajji (Banana Flower Fritters)</td>
+            <td></td>
+            <td>Archana Dongre</td>
+            <td><span class="badge taken">✓ Taken</span></td>
+          </tr>
+          <tr>
+            <td>Sweet Poha</td>
+            <td></td>
+            <td>Archana Dongre</td>
+            <td><span class="badge taken">✓ Taken</span></td>
+          </tr>
+          <tr>
+            <td>Kosambari</td>
+            <td></td>
+            <td>Archana Dongre</td>
+            <td><span class="badge taken">✓ Taken</span></td>
+          </tr>
+          <tr>
+            <td>Juice (Kids &amp; Adults)</td>
+            <td></td>
+            <td>Archana Dongre</td>
+            <td><span class="badge taken">✓ Taken</span></td>
+          </tr>
+          <tr>
+            <td>Rice Item</td>
+            <td></td>
+            <td>—</td>
+            <td><span class="badge open">Open</span></td>
+          </tr>
+          <tr>
+            <td>Chapati / Poori</td>
+            <td>10 pieces</td>
+            <td>—</td>
+            <td><span class="badge open">Open</span></td>
+          </tr>
+          <tr>
+            <td>Chapati / Poori</td>
+            <td>10 pieces</td>
+            <td>—</td>
+            <td><span class="badge open">Open</span></td>
+          </tr>
+          <tr>
+            <td>Chapati / Poori</td>
+            <td>10 pieces</td>
+            <td>—</td>
+            <td><span class="badge open">Open</span></td>
+          </tr>
+          <!-- Add more rows here as needed -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── RSVP Count ── -->
+  <section>
+    <h2>✅ Who's Coming</h2>
+    <div class="card">
+      <div class="rsvp-summary">
+        <!-- EDIT: Update these numbers as RSVPs come in -->
+        <div class="stat"><div class="num">3</div><div class="lbl">Families</div></div>
+        <div class="stat"><div class="num">11</div><div class="lbl">Total Guests</div></div>
+        <div class="stat"><div class="num">0</div><div class="lbl">Maybe</div></div>
+      </div>
+      <ul class="rsvp-list">
+        <!-- EDIT: Add/remove names below as people RSVP -->
+        <li><span>Sahana Bhat</span>       <span class="count">+4 guests</span></li>
+        <li><span>Pallavi Kiran</span>      <span class="count">+3 guests</span></li>
+        <li><span>Archana Dongre</span>    <span class="count">+4 guests</span></li>
+        <!-- <li><span>Your Name</span>     <span class="count">+N guests</span></li> -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── RSVP Form ── -->
+  <section>
+    <h2>📝 RSVP / Sign Up for a Food Item</h2>
+    <div class="card">
+
+      <!--
+        SETUP: Replace YOUR_FORM_ID below with your Formspree form ID.
+        Steps:
+          1. Go to https://formspree.io and sign up (free)
+          2. Create a new form → copy the form ID (e.g. xbjnkpqr)
+          3. Replace YOUR_FORM_ID with that ID
+          4. Formspree will email you every RSVP — no server needed!
+      -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div>
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Full name" />
+          </div>
+          <div>
+            <label for="guests">Number of Guests (incl. yourself) *</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" required placeholder="e.g. 4" />
+          </div>
+        </div>
+
+        <label for="attending">Will you attend? *</label>
+        <select id="attending" name="attending" required>
+          <option value="">— Select —</option>
+          <option value="Yes">✅ Yes</option>
+          <option value="Maybe">🤔 Maybe</option>
+          <option value="No">❌ No</option>
+        </select>
+
+        <label for="food_item">Food Item I'll Bring (optional)</label>
+        <select id="food_item" name="food_item">
+          <option value="">— None / Not sure yet —</option>
+          <option value="Rice Item">Rice Item</option>
+          <option value="Chapati/Poori (10 pcs) - Slot 1">Chapati/Poori (10 pcs) — Slot 1</option>
+          <option value="Chapati/Poori (10 pcs) - Slot 2">Chapati/Poori (10 pcs) — Slot 2</option>
+          <option value="Chapati/Poori (10 pcs) - Slot 3">Chapati/Poori (10 pcs) — Slot 3</option>
+          <option value="Other (see notes)">Other (see notes)</option>
+        </select>
+
+        <label for="notes">Notes (dietary needs, questions, other food item)</label>
+        <textarea id="notes" name="notes" rows="2" placeholder="Optional..."></textarea>
+
+        <input type="hidden" name="_subject" value="Yugadi 2026 RSVP" />
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <button type="submit">Submit RSVP 🎉</button>
+        <p class="form-note">Your response goes directly to the organizer. No account needed.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Yugadi 2026 &mdash; Folsom Kannada Group &nbsp;|&nbsp;
+  Organized by Ram Dongre &nbsp;&middot;&nbsp;
+  <a href="index.html">← Back</a>
+</footer>
+
+</body>
+</html>

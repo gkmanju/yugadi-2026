@@ -1,0 +1,28 @@
+name: Auto-Update RSVP List
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # every 30 minutes
+  workflow_dispatch:           # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  update-rsvp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run RSVP updater
+        env:
+          FORMSPREE_API_KEY: ${{ secrets.FORMSPREE_API_KEY }}
+        run: python update_rsvp.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --staged --quiet || (git commit -m "Auto-update RSVP list [skip ci]" && git push)
